@@ -1,0 +1,11 @@
+<aside>
+  <h1><kbd>Jouler Gifs</kbd></h1>
+
+  <nav *ngIf="history.length !== 0; else noHistory">
+    <a *ngFor="let keyword of history" href="#" (click)="search(keyword)">{{ keyword | titlecase}}</a>
+  </nav>
+
+  <ng-template #noHistory>
+    <span>No history</span>
+  </ng-template>
+</aside>

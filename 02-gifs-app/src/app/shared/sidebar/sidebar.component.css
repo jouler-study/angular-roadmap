@@ -1,0 +1,36 @@
+aside {
+  min-width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  aside {
+    height: auto;
+  }
+
+  nav {
+    max-width: 100%;
+    display: flex;
+    overflow: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    min-width: fit-content;
+    display: inline-block;
+  }
+}

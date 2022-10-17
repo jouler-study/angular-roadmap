@@ -1,0 +1,11 @@
+<h3>Results</h3>
+
+<section class="animate__animated animate__fadeInRight">
+  <section *ngFor="let gif of results" class="card animate__animated animate__fadeIn">
+    <header>
+      <img [src]="gif.images.downsized_medium.url" alt="gif.title">
+    </header>
+
+    <h4>{{gif.title}}</h4>
+  </section>
+</section>
