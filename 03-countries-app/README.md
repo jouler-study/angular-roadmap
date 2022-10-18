@@ -6,6 +6,14 @@
 
 Project created in the Joulers Angular RoadMap
 
+## Demo
+[comment]: <> (Insert gif or link to demo)
+- [DEMO](https://joulers-country-app.netlify.app/assets/images/app-img.jpeg)
+
+## Screenshots
+
+![App Screenshot](https://joulers-country-app.netlify.app/assets/images/app-img.jpeg)
+
 
 ## Features
 
@@ -36,11 +44,6 @@ All skills are study from [Fernango Herrera - Angular course:](https://www.udemy
 **Server:** Api Rest
 
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
 ## Run Locally
 
 Clone the project
@@ -66,12 +69,6 @@ Start the server
 ```bash
   ng serve || npm start
 ```
-
-
-## Demo
-[comment]: <> (Insert gif or link to demo)
-
-
 
 ## Authors
 
