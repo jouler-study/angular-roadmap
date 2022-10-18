@@ -8,7 +8,7 @@ Project created in the Joulers Angular RoadMap
 
 ## Demo
 [comment]: <> (Insert gif or link to demo)
-- [DEMO](https://joulers-country-app.netlify.app/assets/images/app-img.jpeg)
+- [DEMO](https://joulers-country-app.netlify.app/)
 
 ## Screenshots
 
