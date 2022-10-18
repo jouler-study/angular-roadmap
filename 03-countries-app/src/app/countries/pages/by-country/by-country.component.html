@@ -1,0 +1,47 @@
+<div class="animate__animated animate__fadeIn">
+  <h2>Por País</h2>
+  <hr />
+
+  <div class="row">
+    <div class="col">
+      <app-input-country
+        (onEnter)="search($event)"
+        (onDebounce)="getSuggestions($event)"
+      ></app-input-country>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="isSuggestionsActive">
+    <div class="col position-relative">
+      <ul class="list-group position-absolute top-0 w-100">
+        <li
+          class="list-group-item list-group-item-action"
+          *ngFor="let suggestion of suggestions"
+          routerLink="/country/{{ suggestion.fifa }}"
+        >
+          {{ suggestion.name.common }}
+        </li>
+        <li
+          tabindex="0"
+          class="list-group-item list-group-item-primary list-group-item-action"
+          (click)="search(term)"
+          (keyup.enter)="search(term)"
+        >
+          Buscar
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <hr />
+</div>
+
+<p class="alert alert-danger text-center" *ngIf="haveError">
+  No hay resultados para: {{ term }}
+</p>
+
+<div class="row" *ngIf="countries.length > 0">
+  <div class="col">
+    <app-country-table [countries]="countries"></app-country-table>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<p class="alert alert-info" *ngIf="!countryInfo; else divInfo">
+  No se encontró el país
+</p>
+
+<ng-template #divInfo>
+  <section class="container-fluid">
+    <button class="mb-3 btn btn-lg btn-light" routerLink="">Volver</button>
+
+    <div class="row">
+      <figure class="col-6">
+        <img
+          class="img-fluid"
+          src="{{ countryInfo.flags.svg }}"
+          alt="{{ countryInfo.name.common }}"
+        />
+      </figure>
+
+      <div class="col card">
+        <div class="card-body">
+          <h1 class="card-title">
+            {{ countryInfo.name.common }} {{ countryInfo.flag }}
+          </h1>
+
+          <h3 class="card-subtitle mb-2 text-muted">
+            <strong>Capital: </strong>
+            {{ countryInfo.capital }}
+          </h3>
+
+          <p class="card-text">
+            <strong>Región: </strong>
+            {{ countryInfo.region }}
+          </p>
+
+          <p class="card-text">
+            <strong>Subregión: </strong>
+            {{ countryInfo.subregion }}
+          </p>
+
+          <p class="card-text">
+            <strong>Área: </strong>
+            {{ countryInfo.area }} km<sup>2</sup>
+          </p>
+
+          <p class="card-text">
+            <strong>Población: </strong>
+            {{ countryInfo.population }}
+          </p>
+
+          <div>
+            <strong>Idiomas: </strong>
+            <ul>
+              <li *ngFor="let language of languages">
+                {{ language }}
+              </li>
+            </ul>
+          </div>
+
+          <div class="row">
+            <strong class="mb-2">Borders: </strong>
+
+            <div
+              class="btn-group-horizontal"
+              role="group"
+              aria-label="horizontal button group"
+            >
+              <a
+                type="button"
+                class="btn btn-light btn-lg me-2"
+                *ngFor="let border of countryInfo.borders"
+                [routerLink]="['/country', border.toLowerCase()]"
+              >
+                {{ border }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-template>

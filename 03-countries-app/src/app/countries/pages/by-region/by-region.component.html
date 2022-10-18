@@ -1,0 +1,21 @@
+<div class="animate__animated animate__fadeIn">
+  <h2>Por Region: {{ activeRegion }}</h2>
+  <hr />
+
+  <div class="d-flex overflow-auto pb-3">
+    <button
+      type="button"
+      [class]="getCssClass(region)"
+      *ngFor="let region of regions"
+      (click)="activateRegion(region)"
+    >
+      {{ region }}
+    </button>
+  </div>
+</div>
+
+<div class="row" *ngIf="countries.length > 0">
+  <div class="col">
+    <app-country-table [countries]="countries"></app-country-table>
+  </div>
+</div>
